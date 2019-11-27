@@ -3,12 +3,23 @@ package com.example.figurasaleatorias;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
-public class drawShapes1 extends AppCompatActivity {
+public class DrawShapes1 extends AppCompatActivity {
+
+    RandomShapeView mDrawingArea;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_draw_shapes1);
+
+        mDrawingArea = findViewById(R.id.drawing_area);
+
+
+    }
+    public void redraw(View clickedButton){
+
+        mDrawingArea.invalidate();
     }
 }
